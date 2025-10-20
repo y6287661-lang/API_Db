@@ -9,7 +9,7 @@ EXPOSE 8081
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
-COPY ["First_API/First_API.csproj", "First_API/"]
+COPY ["First_API.csproj", "."]
 RUN dotnet restore "./First_API/First_API.csproj"
 COPY . .
 WORKDIR "/src/First_API"
